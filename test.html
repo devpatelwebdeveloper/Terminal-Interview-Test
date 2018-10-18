@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="custom.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Terminal Test</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-default navbar-static-top"><a class="navbar-brand" href="#">
+    <img src="assets/terminal-logo.png" class="d-inline-block align-top" alt="">
+    </a>
+</nav>
+      <div class="container">
+          <div class="table-responsive">
+              <table class="table table-bordered table-striped" id="job_Table">
+                  <tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                  </tr>
+              </table>
+          </div>
+      </div>
+      <!--<section style="background-color: #f4f4f4;" >
+            <div class="container" style="padding:10px;">
+                <!--<div class="row" style="padding-bottom:25px;">
+                    <div class="col-md-2">
+                        <span class="label">Filter by:</span>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="col-md-2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5 class="company" >Bunglow</h5>
+                        <h6 class="city">Kitchner</h6>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="job">Frontend Engineering Lead</p>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="#" class="btn btn-md btn-red">Apply now</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="job-description"></div>
+                </div>
+            </div>
+        </section>-->
+      <script>
+          var jsondata =[
+  {
+    "company": "Bungalow",
+    "job": "Frontend Engineering Lead",
+    "city": "Kitchener"
+  },
+  {
+    "company": "Bungalow",
+    "job": "Full Stack Engineer",
+    "city": "Kitchener"
+  },
+  {
+    "company": "Earnin",
+    "job": "Android Developer",
+    "city": "Vancouver"
+  },
+  {
+    "company": "Earnin",
+    "job": "Senior iOS Developer",
+    "city": "Vancouver"
+  },
+  {
+    "company": "Earnin",
+    "job": "Senior Software Engineer (Full Stack)",
+    "city": "Vancouver"
+  },
+  {
+    "company": "Fluxx Labs Inc",
+    "job": "Senior DevOps Engineer",
+    "city": "Toronto"
+  },
+  {
+    "company": "Fluxx Labs Inc",
+    "job": "Software Developer",
+    "city": "Toronto"
+  },
+  {
+    "company": "Hims",
+    "job": "Data Analyst",
+    "city": "Montréal"
+  },
+  {
+    "company": "Hims",
+    "job": "Database Application Developer",
+    "city": "Kitchener"
+  },
+  {
+    "company": "Neptune Financial",
+    "job": "Senior Software Engineer",
+    "city": "Toronto"
+  },
+  {
+    "company": "Neptune Financial",
+    "job": "Software Engineer",
+    "city": "Toronto"
+  },
+  {
+    "company": "Plays.tv",
+    "job": "Frontend Engineer",
+    "city": "Vancouver"
+  },
+  {
+    "company": "Plays.tv",
+    "job": "Senior Frontend Engineer",
+    "city": "Vancouver"
+  },
+  {
+    "company": "Tally",
+    "job": "Senior Platform Engineer",
+    "city": "Vancouver"
+  },
+  {
+    "company": "Urbandoor",
+    "job": "Senior Backend Engineer",
+    "city": "Vancouver"
+  },
+  {
+    "company": "Urbandoor",
+    "job": "Senior Frontend Engineer",
+    "city": "Vancouver"
+  },
+  {
+    "company": "Zenreach",
+    "job": "Senior Software Engineer, Platform",
+    "city": "Kitchener"
+  }
+]
+
+          $(document).ready(function(){
+             $.getJSON("jsondata", function(data){
+                var jobs_data  = '';
+                 $.each(data, function(key,value){
+                    jobs_data += '<tr>';
+                    jobs_data += '<td>'+value.company+'<br/>'+value.city+'</td>';
+                     job_data += '<td>'+value.job+'</td>';
+                     jobs_data += '</tr>';
+                 });
+                 $('#job_Table').append(jobs_data);
+             });
+          });
+      </script>
+      
+      
+      
+      
+      
+      
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
