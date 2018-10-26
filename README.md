@@ -5,3 +5,8 @@ Using the stack of your choice, re-create the [terminal.io job listings page](ht
 The logo and font can be found under [assets](./assets).
 
 ![Terminal Jobs Page](./screenshot.png)
+
+
+
+> Using Template Literal added the json data to HTML
+> Working on Filter Should be updated soon.
